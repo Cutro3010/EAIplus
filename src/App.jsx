@@ -20,6 +20,10 @@ function App() {
       setSelectedPersonality(personality)
       setMessages([{ role: 'assistant', content: `Hello! I'm ${personality.name}. How can I help you today?` }])
       setShowPersonalityModal(false)
+    } else {
+      setSelectedPersonality("era_corona")
+      setMessages([{ role: 'assistant', content: `Hello! I'm ${personality.name}. How can I help you today?` }])
+      setShowPersonalityModal(false)	
     }
     
     // Load saved theme
