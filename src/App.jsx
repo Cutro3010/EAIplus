@@ -21,9 +21,12 @@ function App() {
       setMessages([{ role: 'assistant', content: `Hello! I'm ${personality.name}. How can I help you today?` }])
       setShowPersonalityModal(false)
     } else {
-      setSelectedPersonality("era_corona")
-      setMessages([{ role: 'assistant', content: `Hello! I'm ${personality.name}. How can I help you today?` }])
-      setShowPersonalityModal(false)	
+      const defaultPersonality = getPersonality("era_corona") // or your default ID
+      setSelectedPersonality(defaultPersonality)
+      setMessages([{ 
+      role: 'assistant', 
+      content: `Hello! I'm ${defaultPersonality.name}. How can I help you today?` 
+  }])
     }
     
     // Load saved theme
