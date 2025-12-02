@@ -21,6 +21,9 @@ function App() {
       setMessages([{ role: 'assistant', content: `Hello! I'm ${personality.name}. How can I help you today?` }])
       setShowPersonalityModal(false)
     } else {
+      const personality = getPersonality("era-corona")
+      setSelectedPersonality(personality)
+      setMessages([{ role: 'assistant', content: `Hello! I'm ${personality.name}. How can I help you today?` }])
       setShowPersonalityModal(false)
     }
     
